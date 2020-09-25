@@ -1,0 +1,69 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#number-guess,
+#result,
+#history {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#history {
+  margin-top: 16px;
+}
+
+main {
+  padding-top: 30vh;
+}
+
+.aboveText {
+  font-size: 40px;
+  color: #fff;
+}
+.banner {
+  color: #fff;
+  font-size: 70px;
+  font-family: sans-serif;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.r {
+  color: #f54e16;
+}
+
+.b {
+  color: #0000a5;
+}
+
+#number-submit:hover {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+#restart-game {
+  background-color: transparent;
+  color: #fff;
+}
+
+#restart-game:hover {
+  background-color: #6c757d;
+  color: #fff;
+  border-color: #6c757d;
+}
+
+#imgBackground {
+  background-image: url("https://www.wallpaperflare.com/static/86/946/461/smoke-background-play-of-light-%C2%A0dark-wallpaper-preview.jpg");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
