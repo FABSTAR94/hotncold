@@ -7,7 +7,7 @@ html {
 #number-guess,
 #result,
 #history {
-  max-width: 400px;
+  max-width: 40vw;
   margin: 0 auto;
 }
 
@@ -20,12 +20,12 @@ main {
 }
 
 .aboveText {
-  font-size: 40px;
+  font-size: 3vw;
   color: #fff;
 }
 .banner {
   color: #fff;
-  font-size: 70px;
+  font-size: 7vw;
   font-family: sans-serif;
 }
 
@@ -61,7 +61,6 @@ span {
   background-image: url("https://www.wallpaperflare.com/static/86/946/461/smoke-background-play-of-light-%C2%A0dark-wallpaper-preview.jpg");
   /* Full height */
   height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
