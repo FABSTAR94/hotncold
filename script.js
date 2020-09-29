@@ -3,8 +3,8 @@
  * TODO: Get user value from input and save it to variable numberGuess ✅
  * TODO: Generate a random number 1 to 100 and save it to variable correctNumber ✅
  * TODO: Console whether the guess is too high, too low, or is correct inside playGame function ✅
- * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
- * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
+ * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct ✅
+ * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow ✅
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
@@ -19,6 +19,7 @@ window.onload = function () {
   //everytime user clicks checkme button it executes the playGame function in which gets user input.
   document.getElementById("number-submit").addEventListener("click", playGame);
   document.getElementById("restart-game").addEventListener("click", initGame);
+  showNumberBelow();
 };
 
 /**
@@ -28,13 +29,8 @@ function playGame() {
   // *CODE GOES BELOW HERE *
   //using the keyword value allows us to get the input the user puts on the ui.
   let numberGuess = document.getElementById("number-guess").value;
-  if (numberGuess > correctNumber) {
-    console.log("You are going to burn!!");
-  } else if (numberGuess < correctNumber) {
-    console.log("You are going to freeze!!");
-  } else {
-    console.log("You made it out alive!!");
-  }
+  //we pass numberGuess in here since its not global.
+  displayResult(numberGuess);
   //we always console.log to verify that it works.
   // console.log(numberGuess);
 }
@@ -44,7 +40,15 @@ function playGame() {
  * HINT: Use if, else if, else statement
  */
 // *CODE GOES BELOW HERE *
-
+function displayResult(numberGuess) {
+  if (numberGuess > correctNumber) {
+    console.log("You are going to burn!!");
+  } else if (numberGuess < correctNumber) {
+    console.log("You are going to freeze!!");
+  } else {
+    console.log("You made it out alive!!");
+  }
+}
 /**
  * Initialize a new game by resetting all values and content on the page
  * HINT: reset the correctNumber, guesses, and HTML content
@@ -122,7 +126,8 @@ function showYouWon() {
    * HINT: Use the 'won' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("won", text);
+  console.log(dialog);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -134,7 +139,7 @@ function showNumberAbove() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -146,6 +151,6 @@ function showNumberBelow() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
