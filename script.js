@@ -153,7 +153,7 @@ function showYouWon() {
 }
 
 function showNumberAbove() {
-  const text = "Your guess is too high!";
+  const text = "Your guess is too Hot!";
   /**
    * Retrieve the dialog using the getDialog() function
    * and save it to variable called dialog
@@ -165,7 +165,7 @@ function showNumberAbove() {
 }
 
 function showNumberBelow() {
-  const text = "Your guess is too low!";
+  const text = "Your guess is too  Cold!";
   /**
    * Retrieve the dialog using the getDialog() function
    * and save it to variable called dialog
