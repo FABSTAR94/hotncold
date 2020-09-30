@@ -7,7 +7,7 @@
  * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow ✅
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog ✅
  * TODO: Save the guess history in a variable called guess ✅
- * TODO: Display the guess history using displayHistory() function
+ * TODO: Display the guess history using displayHistory() function ✅
  * TODO: Use the initGame() function to restart the game
  */
 
@@ -35,6 +35,7 @@ function playGame() {
   // console.log(numberGuess);
   // This will call the saveGuestHistory function and append the new value into the list.
   saveGuessHistory(numberGuess);
+  displayHistory();
 }
 
 /**
@@ -85,21 +86,30 @@ function getRandomNumber() {
 function saveGuessHistory(guess) {
   // *CODE GOES BELOW HERE *
   guesses.push(guess);
-  console.log(guesses);
 }
 
 /**
  * Display guess history to user
  * HTML TO USE:
  * <ul class='list-group'>
- *  <li class='list-group-item'>You guessed {number}</li
+ *  <li class='list-group-item'>You guessed {number}</li>
  * </ul>
  * HINT: use while loop and string concatentation to create a list of guesses
  */
 function displayHistory() {
-  let index; // TODO
+  let index = guesses.length - 1; // TODO
   let list = "<ul class='list-group'>";
   // *CODE GOES BELOW HERE *
+  while (index >= 0) {
+    list +=
+      "<li class='list-group-item'>" +
+      "You guessed" +
+      " " +
+      guesses[index] +
+      "</li>";
+    //need to decrement it by one every time it goes through the loop else it will create an infinite loop.
+    index -= 1;
+  }
   list += "</ul>";
   document.getElementById("history").innerHTML = list;
 }
