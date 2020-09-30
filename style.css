@@ -1,7 +1,8 @@
 body,
 html {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  height: 130vh;
 }
 
 #number-guess,
@@ -16,7 +17,8 @@ html {
 }
 
 main {
-  padding-top: 30vh;
+  padding-top: 18vh;
+  height: auto;
 }
 
 .aboveText {
@@ -31,6 +33,10 @@ main {
 
 span {
   font-weight: bolder;
+}
+
+h2 {
+  color: grey;
 }
 
 .r {
@@ -65,4 +71,27 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.alert-warning {
+  color: #fff;
+  font-weight: bolder;
+  background: tan;
+
+  border: none;
+}
+
+.alert-success {
+  color: #fff;
+  font-weight: bolder;
+  background: green;
+  border: none;
+}
+
+.list-group {
+  flex-direction: column;
+}
+
+.list-group-item {
+  background-color: gainsboro;
 }
