@@ -20,7 +20,18 @@ window.onload = function () {
   //everytime user clicks checkme button it executes the playGame function in which gets user input.
   document.getElementById("number-submit").addEventListener("click", playGame);
   document.getElementById("restart-game").addEventListener("click", initGame);
+  domEvents();
 };
+
+//We will get one html element.
+function domEvents() {
+  for (let i = 0; i < document.body.children.length; i++) {
+    //now shows u the innerhtml of those 2 children. You can do innerText to just get the text.
+    alert(document.body.children[i].innerText);
+    //document.body.firstElementChild;innerHtml
+    //document.body.lastElementChild;innerHtml
+  }
+}
 
 /**
  * Functionality for playing the whole game
